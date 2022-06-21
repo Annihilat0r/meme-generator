@@ -13,6 +13,7 @@ const canvas = document.getElementById('canvas');
 const canvasPlaceholder = document.getElementById('canvasPlaceholder');
 const ctx = canvas.getContext('2d');
 const fileInput = document.getElementById('file');
+const exampleInput = document.getElementById('example');
 const addTextboxBtn = document.getElementById('addTextboxBtn');
 const inputsContainer = document.getElementById('inputsContainer');
 const generateMemeBtn = document.getElementById('generateMemeBtn');
@@ -23,6 +24,7 @@ const downloadMemeModalCloseBtn = document.getElementById('downloadMemeModalClos
 const webShareComponent = document.querySelector('web-share');
 let selectedImage = null;
 const DEFAULT_GENERATED_FILE_NAME = 'meme.png';
+
 let generatedFileName = DEFAULT_GENERATED_FILE_NAME;
 
 const defaultOptions = {
@@ -160,6 +162,13 @@ function handleFileSelect(evt) {
   });
 
   reader.readAsDataURL(file);
+}
+
+function handleExample(evt) {
+
+//  image = "./assets/meme.jpg";
+canvasPlaceholder.innerHTML="<img src='http://bwaptmemegenerator.s3-website.eu-central-1.amazonaws.com/assets/meme.jpg' style='width:100%'>"
+  
 }
 
 function onOpenVideoModalButonClick() {
@@ -326,6 +335,7 @@ async function urltoFile(url, filename, mimeType) {
 }
 
 fileInput.addEventListener('change', handleFileSelect);
+exampleInput.addEventListener('click', handleExample);
 canvasPlaceholder.addEventListener('click', handleCanvasPlaceholderClick);
 openVideoModalBtn.addEventListener('click', onOpenVideoModalButonClick);
 closeVideoModalBtn.addEventListener('click', () => toggleModal(videoModal, false));
