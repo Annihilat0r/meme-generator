@@ -167,7 +167,7 @@ function handleFileSelect(evt) {
 function handleExample(evt) {
 
 //  image = "./assets/meme.jpg";
-canvasPlaceholder.innerHTML="<img src='http://bwaptmemegenerator.s3-website.eu-central-1.amazonaws.com/assets/meme.jpg' style='width:100%'>"
+canvasPlaceholder.innerHTML="<img src='//bwaptmemegenerator.s3-website.eu-central-1.amazonaws.com/assets/meme.jpg' style='width:100%'>"
   
 }
 
