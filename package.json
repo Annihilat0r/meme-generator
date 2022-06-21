@@ -3,18 +3,20 @@
   "version": "1.0.0",
   "description": "Easily add text to images or memes.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start":"npx http-server -p 80"
+  },
   "keywords": [
     "meme",
     "meme-generator",
     "meme-maker"
   ],
-  "author": "George Raptis <georapbox@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "eslint": "~8.11.0"
   },
   "dependencies": {
-    "@georapbox/web-share-element": "~1.0.1"
+    "@georapbox/web-share-element": "~1.0.1",
+    "http-server": "^14.1.1"
   }
 }
